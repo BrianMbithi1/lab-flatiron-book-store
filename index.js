@@ -46,16 +46,18 @@ const bookStore = {
 const bookStoreTitle = document.getElementById('header');
 bookStoreTitle.textContent = bookStore.name;
 
+const bookList = document.getElementById('book-list');
+
 for (let i = 0; i < bookStore.books.length; i++) {
     const book = bookStore.books[i];
     
     const bookContainer = document.createElement('li');
-    const bookTitle = document.createElement('h2');
+    const bookTitle = document.createElement('h3');
     const bookAuthor = document.createElement('p');
     const bookImage = document.createElement('img');
     
     bookTitle.textContent = book.title;
-    bookAuthor.textContent = `Author: ${book.author}`;
+    bookAuthor.textContent = book.author;
     bookImage.src = book.imageUrl;
 
     bookContainer.appendChild(bookTitle);
